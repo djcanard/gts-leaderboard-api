@@ -1,0 +1,13 @@
+{
+  "localize":                 { "name": "localize", "rule": "5 8 * * *", "fn": "jobLocalize", "enabled": true },
+  "meta":                     { "name": "meta", "rule": "6 8 * * *", "fn": "jobMeta", "enabled": true },
+  "tags":                     { "name": "tags", "rule": "7 8 * * *", "fn": "jobTags", "enabled": true },
+  "cars":                     { "name": "cars", "rule": "8 8 * * *", "fn": "jobConvertCars", "enabled": true },
+  "categories":               { "name": "categories", "rule": "9 8 * * *", "fn": "jobConvertCategories", "enabled": true },
+  "courses":                  { "name": "courses", "rule": "10 8 * * *", "fn": "jobConvertCourses", "enabled": true },
+  "profiles":                 { "name": "profiles", "rule": "11 8 * * *", "fn": "jobProfiles", "enabled": true },
+  "dailyraceevents":          { "name": "dailyraceevents", "rule": "1 * * * *", "fn": "jobDailyRaceEvents", "enabled": true },
+  "dailyracecourserecords":   { "name": "dailyracecourserecords", "rule": "*/10 * * * *", "fn": "jobDailyRaceCourseRecords", "enabled": true },
+  "allcourserecords":         { "name": "allcourserecords", "rule": "*/15 * * * *", "fn": "jobAllCourseRecords", "enabled": false },
+  "test":                     { "name": "test", "rule": "*/5 * * * *", "fn": "jobTest", "enabled": false }
+}

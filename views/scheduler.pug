@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    h1 Scheduler
+    - var now = new Date().toLocaleString()
+    div #{now}
+    div
+        a(href=baseUrl) refresh
+    ul
+        li(class='header')
+            span(class='reschedule') reschedule
+            span(class='cancel') cancel
+            span(class='now') now
+            span(class='name') name
+            span(class='rule') rule
+            span(class='enabled') enabled
+            span(class='running') running
+            span(class='nextInvocation') next
+            span(class='count') count
+            span(class='lastEnded') last ended
+            span(class='lastDuration') last dur.
+            span(class='maxDuration') max dur.
+            span(class='error') error
+            each job in jobs
+                li
+                    span(class='reschedule')
+                        a(href=baseUrl + '/reschedule/' + job.name) reschedule
+                    span(class='cancel')
+                        a(href=baseUrl + '/cancel/' + job.name) cancel
+                    span(class='now')
+                        a(href=baseUrl + '/now/' + job.name) now
+                    span(class='name') #{job.name}
+                    span(class='rule') #{job.rule}
+                    span(class='enabled') #{job.enabled}
+                    span(class='running') #{job.running}
+                    if job.job && job.job.nextInvocation()
+                        span(class='nextInvocation') #{job.job.nextInvocation().toDate().toLocaleString()}
+                    else
+                        span(class='nextInvocation') -
+                    span(class='count') #{job.count}
+                    if job.lastEnded
+                        span(class='lastEnded') #{job.lastEnded.toLocaleString()}
+                    else
+                        span(class='lastEnded') -
+                    span(class='lastDuration') #{job.lastDuration}
+                    span(class='maxDuration') #{job.maxDuration}
+
+                    span(class='error') #{job.lastError}

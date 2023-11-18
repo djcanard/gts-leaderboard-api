@@ -1,0 +1,11 @@
+[Unit]
+Description=gts-leaderboard-api
+
+[Service]
+ExecStart=/usr/local/bin/node ./bin/www-api.js
+Restart=always
+RestartSec=3
+#User=nobody
+#Group=nogroup
+Environment="PATH=/usr/bin:/usr/local/bin" "NODE_ENV=production"
+WorkingDirectory=/mnt/usbdrv/build/gts-leaderboard-api/

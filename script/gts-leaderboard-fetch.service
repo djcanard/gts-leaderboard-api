@@ -1,0 +1,11 @@
+[Unit]
+Description=gts-leaderboard-fetch
+
+[Service]
+ExecStart=/usr/local/bin/node ./bin/www-fetch.js
+Restart=always
+RestartSec=3
+#User=nobody
+#Group=nogroup
+Environment="PATH=/usr/bin:/usr/local/bin" "NODE_ENV=production"
+WorkingDirectory=/mnt/usbdrv/build/gts-leaderboard-api/

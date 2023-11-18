@@ -1,0 +1,34 @@
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Generated data files
+/data/raw/profile/*.json
+/data/raw/course_record/*.json
+/data/raw/event/*.json
+/data/store/cars.json
+/data/store/categories.json
+/data/store/courseranking.json
+/data/store/courses.json
+/data/store/info.json
+/data/store/profiles.json
+/data/store/dailyraces.json
+

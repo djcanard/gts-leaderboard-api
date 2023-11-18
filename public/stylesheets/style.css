@@ -1,0 +1,86 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: smaller;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+  padding-left: 0px;
+  width: fit-content;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+li.header span {
+  font-weight: bold;
+}
+
+li span {
+  width: 150px;
+  white-space: nowrap;
+  margin-right: 2px;
+}
+
+ol {
+  display: flex;
+}
+
+span.reschedule {
+  width: 76px;
+}
+
+span.cancel {
+  width: 50px;
+}
+
+span.now {
+  width: 40px;
+}
+
+span.name {
+  width: 140px;
+}
+
+span.rule {
+  width: 90px;
+}
+
+span.enabled {
+  width: 70px;
+}
+
+span.running {
+  width: 70px;
+}
+
+span.count {
+  width: 50px;
+}
+
+span.lastEnded {
+  width: 150px;
+}
+
+span.lastDuration {
+  width: 70px;
+}
+
+span.maxDuration {
+  width: 70px;
+}
+
+span.nextInvocation {
+  width: 150px;
+}
+
+span.lastError {
+  width: 200px;
+}
