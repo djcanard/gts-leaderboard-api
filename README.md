@@ -1,5 +1,15 @@
 # Gran Turismo Sport leaderboard API
 
+## usage
+
+### npm run start-fetch
+
+Runs scheduled tasks to fetch data from the Gran Turismo website, convert it, and store it in the `/data/raw` folder.
+
+### npm run start-api
+
+Starts up REST endpoints to make the converted data files available for the gts-leaderboard Vue app .
+
 ## feature backlog
 
 * update data with check on faster result
